@@ -1,0 +1,271 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[a4paper,left=2cm,right=2cm, top=2cm, bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsthm,amsfonts,amstext}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata,arrows,positioning}
+\tikzset{
+ node distance=2.5cm,
+ initial text={$M_{indice}$},
+ double distance=1pt,
+ every state/.style={semithick,fill=blue!20!white,minimum size=20pt,inner sep=0pt},
+ every edge/.style={draw,->,>=stealth,auto,semithick,font=\ttfamily\small}
+}
+
+\title{LateX - Basic Codes for Professional Texts}
+\author{Richardson L. Bessa Filho
+}
+\date{ }
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section*{Title}
+
+\section{Section}
+%---------------------------------------------------------------
+\subsection{Subsection}
+%---------------------------------------------------------------
+\subsubsection{Subsubsection}
+\begin{enumerate}
+%---------------------------------------------------------------
+    \item Enumeration example:
+    
+        \begin{enumerate}
+            \item First item
+            \item Second item
+        \end{enumerate}
+%---------------------------------------------------------------
+\item Itemize (*) example:
+
+        \begin{itemize}
+            \item First item
+            \item Second item
+        \end{itemize}
+%---------------------------------------------------------------
+\item Itemize (I) example:
+        
+        need to include \verb|\usepackage{enumerate}| 
+        \begin{enumerate}[I]
+            \item First item
+            \item Second item
+        \end{enumerate}
+%---------------------------------------------------------------
+\item Itemize (i) example:
+        
+        need to include \verb|\usepackage{enumerate}| 
+        \begin{enumerate}[i]
+            \item First item
+            \item Second item
+        \end{enumerate}
+%---------------------------------------------------------------
+\item Text color example:
+
+      need to include \verb|\usepackage{xcolor}| 
+
+\textcolor{blue}{BLUE}
+
+\textcolor{red}{RED}
+
+\textcolor{green}{GREEN}
+
+
+%---------------------------------------------------------------
+\item Example text in inline math mode (default):
+
+You must enclose the text between \$\verb|expression|\$
+
+$ax^2 + bx +c = 0$
+
+$(A \cup B) \cap C = \{x \in \mathbb{N} \mid x^2 < 25\}$
+
+$\neg q \rightarrow \neg p$
+
+$\mathcal{L}_{A21}$: $G_2=(V,\Sigma,P,S)=(\{A,B,C,D,E,F,S\},\{0,1, \varepsilon \},P,S)$
+%---------------------------------------------------------------
+\item Example of text in math mode highlighted (centered):
+You must enclose the text between \$\$\verb|expression|\$\$
+
+$$ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} $$
+
+$$\sum_{i=1}^{n} a_i$$
+
+$$ \binom{n+1}{k} $$
+%---------------------------------------------------------------
+\item Figure inclusion
+
+        need to include \verb|\usepackage{graphicx}| 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{MP1.jpg}
+\caption{Rusty metal image}
+\end{figure}
+%---------------------------------------------------------------
+\newpage
+\item Table example 1:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ default & 1 & 0 & 0 & 1 & 0 & 1 \\ \hline
+ \textbf{bold} & 1 & 0 & 0 & 1 & 0 & 1 \\
+ \textit{italics} & 1 & 0 & 0 & 1 & 0 & 1 \\ 
+  \textsc{capslock} & 1 & 0 & 0 & 1 & 0 & 1 \\
+  \textsuperscript{superscript} & 1 & 0 & 0 & 1 & 0 & 1 \\
+  \verb|reserved| & \% & \# & \{ & \} & 0 & 1 \\
+\hline
+\end{tabular}
+\end{table}
+%---------------------------------------------------------------
+
+\item Table example 2:
+  $$
+  \begin{array}{ccll}
+  \hline
+  \textbf{State} & \textbf{ID} & \textbf{Expression} & \textbf{Action}\\
+  \hline
+    I & 1 & S = 0A \cup 1B           &\\
+      & 2 & A = 0B \cup 1B \cup \varepsilon          &\\
+      & 3 & B = 0A \cup 1A           &\\
+  \hline
+   II & 1 & S = 0A \cup 1S                 &\\
+      & 2 & A = 0^*1B                      & I.2 \to \texttt{Lema de Arden}\\
+      & 3 & B = 0C \cup 1S                 &\\
+      & 4 & C = (0\cup 11)C \cup 1\cup \varepsilon & I.5 \to I.4, \text{Fatoração}\\
+  \hline
+  III & 1 & S = 0A \cup 1S              &\\
+      & 2 & A = 0^*10C\cup 0^*11S       & II.3 \to II.2\\
+      & 3 & C = (0\cup 11)^*(1\cup \varepsilon) & \text{Lema de Arden}\\
+  \hline
+   IV & 1 & S = 0A \cup 1S                              &\\
+      & 2 & A = 0^*10(0\cup 11)^*(1\cup \varepsilon)\cup 0^*11S & III.3 \to III.2\\
+  \hline
+    V & 1 & S = 0^+10(0\cup 11)^*(1\cup \varepsilon)\cup 0^+11S \cup 1S & IV.2 \to IV.1\\
+  \hline
+   VI & 1 & S = (1\cup 0^+11)^*0^+10(0\cup 11)^*(1\cup \varepsilon) & \text{Fatoração, Lema de Arden}\\ 
+   \hline
+  \end{array}
+  $$
+  
+  %-------------------------------------------------------------
+\item  Array example:
+  $$ 
+   P =
+   \left\{\begin{array}{l}
+    S \to A \mid D,\\
+    A \to 0B,\\
+    B \to 0C \mid 1C \mid \varepsilon \\
+    C \to 0B \mid 1B,\\
+    D \to 1E\\
+    E \to 0F \mid 1F,\\
+    F \to 0E \mid 1E \mid \varepsilon
+   \end{array}\right\}.
+  $$
+%---------------------------------------------------------------
+ \item Derivation tree example:
+ 
+        need to include \verb|\usepackage{tikz}|
+        
+        need to include \verb|\usetikzlibrary{arrows}|
+\begin{center}
+    % size
+   \begin{tikzpicture}[
+    ->,>=stealth',
+    level distance=1.3cm,
+    level 2/.style={sibling distance=2.0cm},
+    level 3/.style={sibling distance=1cm},
+    transform shape,
+    scale=.8
+   ]
+   % tree construction
+    \node (t1) {$S$} %start node
+    child { 
+        node {0} 
+    }
+    child { 
+        node {$S$}
+        child { 
+            node {$A$}
+            child { 
+                node {0} 
+            }
+            child { 
+                node {$A$} 
+                child { 
+                    node {$\varepsilon$}
+                }
+            }
+            child { 
+                node {$1$} 
+            } 
+        }
+    }
+    child { node {0} };
+%      
+   
+   \end{tikzpicture}
+  \end{center}
+%-----------------------------------------------------------------------------
+
+\item Automata:
+
+        need to include \verb|\usetikzlibrary{arrows}|
+        
+        need to include \verb|\usetikzlibrary{automata,arrows,positioning}|
+        
+        % automata size:
+
+\tikzset{
+ node distance=2.5cm, % assigns the distance between nodes for all graphs
+ initial text={$M_{id}$}, % start point text
+ double distance=1pt,
+ every state/.style={semithick,fill=blue!20!white,minimum size=20pt,inner sep=0pt},
+ every edge/.style={draw,->,>=stealth,auto,semithick,font=\ttfamily\small}
+}
+        
+        \begin{center} %centralize
+ \begin{tikzpicture}[
+  node distance=2.cm, % assigns the distance between nodes only to the following graph
+   transform shape,
+   scale=1.1
+  ]
+  %add nodes and assign them states and conditions
+   \node[state,initial]                                   (s0) {$s_0$};
+   \node[state,right of=s0]                               (s1) {$s_1$};
+   \node[state,right of=s1]                               (s2) {$s_2$};
+   \node[state,fill=green!20!white,accepting,right of=s2] (s3) {$s_3$};
+   \node[state,fill=green!20!white,accepting,below of=s3] (s4) {$s_4$};
+   \node[state,fill=red!20!white,left of=s4]              (s5) {$s_5$};
+ %add edges and their weights/behaviours
+   \draw (s0) edge               node {22}   (s1)
+              edge[loop below]   node {13}   (s0)
+         (s1) edge[loop above]   node {7}   (s1)
+              edge               node {19}   (s2)
+         (s2) edge               node {42}   (s3)
+              edge[bend left=30] node {101}   (s0)
+         (s3) edge[loop right]   node {00000}   (s3)
+              edge[bend left=20] node {11111}   (s4)
+         (s4) edge               node {0212121}   (s5)
+              edge[bend left=20] node {1}   (s3)
+         (s5) edge[loop left]    node {0,1} (s5)
+         ; %insert ; after defining the edges to indicate the end of "\draw"
+ \end{tikzpicture}
+\end{center}
+\end{enumerate}
+
+\end{document}
