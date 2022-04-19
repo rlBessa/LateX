@@ -2,7 +2,8 @@
 
 I recommend the Overleaf editor for writing your LateX projects. With this tool you can preview the code and the result at the same time, side by side!
 
-<img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white" />
+[<img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white" />]
+(https://www.overleaf.com/) 
 
 Below I present basic LateX codes to assist in the agile and quality writing of articles, reports and texts in general.
 
