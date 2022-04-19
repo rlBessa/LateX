@@ -1,6 +1,6 @@
 # LateX - basic codes for professional texts 
 
-I recommend the Overleaf editor for writing your LateX projects. With this tool you can preview the code and the result at the same time, side by side!
+I recommend the Overleaf editor for writing your LateX projects. With this tool you can preview the code and the result at the same time, side by side! It's online, free and collaborative.
 
 
 [<img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white" />](https://www.overleaf.com/) 
