@@ -1,4 +1,4 @@
-# LateX - basic codes for professional texts 
+# LateX - basic codes
 
 I recommend the Overleaf editor for writing your LateX projects. With this tool you can preview the code and the result at the same time, side by side! It's online, free and collaborative.
 
