@@ -11,6 +11,10 @@ Below I present basic LateX codes to assist in the agile and quality writing of 
 
 ## Page layout
 
+#### Page dimensions
+
+#### Header
+
 ## Sections
 
 #### Title
