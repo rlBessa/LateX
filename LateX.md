@@ -7,9 +7,48 @@ I recommend the Overleaf editor for writing your LateX projects. With this tool 
 ) 
 
 
-Below I present basic LateX codes to assist in the agile and quality writing of articles, reports and texts in general.
+Below I present basic LateX codes to assist in the agile and quality writing of articles, reports and books.
 
 ## Page layout
+
+#### Document Type
+      \documentclass[option1, option2, etc.]{type}
+      
+Braces [ ] are not required. They are used to configure settings other than the defaults for the page's type.
+
+By default, in LateX a new document is defined as:
+                 
+      \documentclass[10pt, a4papper, onecolumn, oneside, notitlepage]{article} 
+      
+      \documentclass[10pt, a4papper, onecolumn, oneside, titlepage, openany]{report} 
+       
+      \documentclass[10pt, a4papper, onecolumn, twoside, titlepage, openright]{book} 
+
+**Types:** 
+
+* article
+      
+* report
+      
+* book
+      
+**Options:**
+
+* 10pt *or* 11pt *or* 12pt (font size)
+
+* a4paper *or* letterpaper *or* a4paper *or* letterpaper *or* a5paper *or* b5paper *or* executivepaper *or* legalpaper (paper size and format)
+
+* onecolumn *or* twocolumn (multiple columns )
+
+* fleqn *or* leqno (formula-specific options)
+
+* landscape (landscape print mode)
+
+* oneside *or* twoside (single- and double-sided documents)
+
+* notitlepage *or* titlepage (titlepage behavior)
+
+* openright *or* openany (chapter opening page)
 
 #### Page dimensions
 
