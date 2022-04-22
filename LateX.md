@@ -11,7 +11,7 @@ Below I present basic LateX codes to assist in the agile and quality writing of 
 
 ## Page layout
 
-#### Document Type
+### Document Type
       \documentclass[option1, option2, etc.]{type}
       
 Braces [ ] are not required. They are used to configure settings other than the defaults for the page's type.
@@ -24,7 +24,7 @@ By default, in LateX a new document is defined as:
        
       \documentclass[10pt, a4papper, onecolumn, twoside, titlepage, openright]{book} 
 
-**Types:** 
+#### Types: 
 
 * article
       
@@ -32,7 +32,7 @@ By default, in LateX a new document is defined as:
       
 * book
       
-**Options:**
+#### Options:
 
 * 10pt *or* 11pt *or* 12pt (font size)
 
@@ -50,29 +50,29 @@ By default, in LateX a new document is defined as:
 
 * openright *or* openany (chapter opening page)
 
-#### Page dimensions
+### Page dimensions
 
-#### Header
+### Header
 
 ## Sections
 
-#### Title
+### Title
       \section*{TITLE}
 
-#### Section
+### Section
       \section{SECTION NAME}
 
-#### Subsection
+### Subsection
       \subsection{SUBSECTION NAME}
 
-#### Subsubsection
+### Subsubsection
       \subsubsection{SUBSUBSECTION NAME}
   
 ![01](https://user-images.githubusercontent.com/61857348/164080605-3b2f4ddc-50eb-44f7-b805-1e4ffd885b3f.png)
   
 ## Enumerate and Itemize
 
-#### Enumeration  
+### Enumeration  
       Enumeration example:
         \begin{enumerate}
             \item First item
@@ -81,7 +81,7 @@ By default, in LateX a new document is defined as:
         
 ![02](https://user-images.githubusercontent.com/61857348/164081420-795cd8ad-3048-4b45-a3fc-a04d6b5b3384.png)
 
-#### Enumeration within enumeration
+### Enumeration within enumeration
       Example of enumeration within enumeration:
         \begin{enumerate}
             \item First number
@@ -94,7 +94,7 @@ By default, in LateX a new document is defined as:
 
 ![03](https://user-images.githubusercontent.com/61857348/164081603-ff31f444-4885-4fcc-81dd-4ab7cdc8ded1.png)
 
-#### Itemize (*)
+### Itemize (*)
       Itemize (*) example:
         \begin{itemize}
             \item First item
@@ -103,7 +103,7 @@ By default, in LateX a new document is defined as:
         
 ![04](https://user-images.githubusercontent.com/61857348/164082030-58dccf28-f6d8-4f00-8feb-5717709f22dc.png)
         
-#### Itemize (I)
+### Itemize (I)
       Itemize (I) example:
         need to include \verb|\usepackage{enumerate}| 
         \begin{enumerate}[I]
@@ -113,7 +113,7 @@ By default, in LateX a new document is defined as:
         
 ![05](https://user-images.githubusercontent.com/61857348/164082375-728c5aab-3482-411f-9acb-066e4cda0a8c.png)
 
-#### Itemize (i)
+### Itemize (i)
       Itemize (i) example:
         need to include \verb|\usepackage{enumerate}| 
         \begin{enumerate}[i]
@@ -125,10 +125,10 @@ By default, in LateX a new document is defined as:
 
 ## Graphic elements
 
-#### Figure inclusion
+### Figure inclusion
 
 
-#### Text color
+### Text color
       Text color example:
       need to include \verb|\usepackage{xcolor}| 
       \textcolor{blue}{BLUE}
@@ -139,7 +139,7 @@ By default, in LateX a new document is defined as:
 
 ## Math layout & elements
 
-#### Inline math mode
+### Inline math mode
         Example text in inline math mode (default):
         You must enclose the text between \$ expression \$
         $ax^2 + bx +c = 0$
@@ -150,7 +150,7 @@ By default, in LateX a new document is defined as:
 
 ![08](https://user-images.githubusercontent.com/61857348/164083107-67a7fe05-ae5c-4f10-a750-8359e0df2c87.png)
 
-#### Highlighted math mode 
+### Highlighted math mode 
          Example of text in math mode highlighted (centered):
          You must enclose the text between \$\$ expression \$\$
          $$ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} $$
@@ -161,7 +161,7 @@ By default, in LateX a new document is defined as:
 
 ## Tables, graphs and diagrams
 
-#### Table style 1
+### Table style 1
         Table example 1:
         \begin{table}[h]
             \centering
@@ -179,7 +179,7 @@ By default, in LateX a new document is defined as:
         
 ![10](https://user-images.githubusercontent.com/61857348/164083853-4547c685-2765-49c6-9ec9-7f7cd5e99dad.png)
 
-#### Table style 2
+### Table style 2
         Table example 2:
             $$
                 \begin{array}{ccll}
@@ -211,7 +211,7 @@ By default, in LateX a new document is defined as:
             
 ![11](https://user-images.githubusercontent.com/61857348/164084312-606a1aba-e41e-48bc-803c-4bf47d25484a.png)
 
-#### Array
+### Array
         Array example:
       $$ 
           P =
@@ -228,7 +228,7 @@ By default, in LateX a new document is defined as:
       
 ![12](https://user-images.githubusercontent.com/61857348/164084814-1321a205-4679-45dc-8462-97c6b5191317.png)
 
-#### Derivation tree diagram
+### Derivation tree diagram
         Derivation tree example:
         need to include \verb|\usepackage{tikz}|        
         need to include \verb|\usetikzlibrary{arrows}|
@@ -271,7 +271,7 @@ By default, in LateX a new document is defined as:
 ![13](https://user-images.githubusercontent.com/61857348/164085674-c22c42cb-6746-4056-960e-bbb709a47daf.png)
 
 
-#### Automata 
+### Automata 
         Automata:
         need to include \verb|\usetikzlibrary{arrows}|        
         need to include \verb|\usetikzlibrary{automata,arrows,positioning}|              
