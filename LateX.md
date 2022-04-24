@@ -14,6 +14,8 @@ Below I present basic LateX codes to assist in the agile and quality writing of 
 ### Document Type
       \documentclass[option1, option2, etc.]{type}
       
+This is the first command you need to start your LateX document.
+      
 Braces [ ] are not required. They are used to configure settings other than the defaults for the page's type.
 
 By default, in LateX a new document is defined as:
