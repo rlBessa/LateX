@@ -273,6 +273,7 @@ By default, in LateX a new document is defined as:
 
 ### Automata 
         Automata:
+        need to include \verb|\usepackage{tikz}\|
         need to include \verb|\usetikzlibrary{arrows}|        
         need to include \verb|\usetikzlibrary{automata,arrows,positioning}|              
         \tikzset{
